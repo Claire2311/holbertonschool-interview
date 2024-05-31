@@ -11,7 +11,6 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 {
     int i, j;
 
-    // Step 1: Add grid2 to grid1
     for (i = 0; i < 3; i++)
     {
         for (j = 0; j < 3; j++)
@@ -20,13 +19,11 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
         }
     }
 
-    // Step 2: Stabilize grid1
     while (1)
     {
         int unstable = 0;
         int temp_grid[3][3] = {0};
 
-        // Check for instability and prepare the toppling
         for (i = 0; i < 3; i++)
         {
             for (j = 0; j < 3; j++)
@@ -47,11 +44,9 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
             }
         }
 
-        // If no cells are unstable, break out of the loop
         if (!unstable)
             break;
 
-        // Print the unstable grid
         printf("=\n");
 
         for (i = 0; i < 3; i++)
@@ -65,7 +60,6 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
             printf("\n");
         }
 
-        // Apply the toppling
         for (i = 0; i < 3; i++)
         {
             for (j = 0; j < 3; j++)
