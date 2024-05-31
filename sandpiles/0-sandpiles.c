@@ -22,7 +22,7 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
     while (1)
     {
         int unstable = 0;
-        int temp_grid[3][3] = {0};
+        int temp_grid[3][3] = {{0}};
 
         for (i = 0; i < 3; i++)
         {
