@@ -7,6 +7,8 @@ This is the solution to solve the Island Perimeter algorithm
 def island_perimeter(grid):
     """Function to solve the Island Perimeter algorithm"""
     a = 0
+    number_of_lines = len(grid) - 1
+    print("number_of_lines", number_of_lines)
 
     coordinates = []
 
@@ -14,6 +16,7 @@ def island_perimeter(grid):
         for j in range(len(grid)):
             if grid[i][j] == 1:
                 coordinates.append([i, j])
+    print("coordinates", coordinates)
 
     for abs in coordinates:
         # print(grid[abs[0]][abs[1] + 1])  # droite
@@ -26,9 +29,10 @@ def island_perimeter(grid):
             a += 1
         if grid[abs[0] - 1][abs[1]] == 0:
             a += 1
-        if grid[abs[0] + 1][abs[1]] == 0:
+        if abs[0] + 1 > number_of_lines or grid[abs[0] + 1][abs[1]] == 0:
             a += 1
 
+    print(a)
     return a
 
 
@@ -48,4 +52,11 @@ def island_perimeter(grid):
 #     [20, 21, 22, 23, 24, 25]
 #     ]
 
-# island_perimeter(grid)
+grid = [
+    [0, 0, 0, 0, 0, 0],
+    [0, 1, 1, 1, 0, 0],
+    [0, 1, 1, 1, 0, 0],
+    [0, 1, 1, 1, 0, 0]
+    ]
+
+island_perimeter(grid)
