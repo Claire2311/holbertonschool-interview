@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+This is the solution to solve the Lockboxes algorithm
+"""
+
 
 def canUnlockAll(boxes):
     """This is a function to solve the Lockboxes algorithm"""
