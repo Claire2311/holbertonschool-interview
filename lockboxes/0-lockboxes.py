@@ -18,7 +18,9 @@ def canUnlockAll(boxes):
         opened_boxes.append(number_of_box)
         new_boxes_to_open.remove(number_of_box)
         for key in boxes[number_of_box]:
-            if key not in obtained_keys:
+            if key >= len(num_of_boxes):
+                pass
+            elif key not in obtained_keys:
                 obtained_keys.append(key)
                 new_boxes_to_open.append(key)
 
