@@ -25,9 +25,9 @@ def island_perimeter(grid):
         # print(grid[abs[0]][abs[1] - 1])  # gauche
         # print(grid[abs[0] - 1][abs[1]])  # haut
         # print(grid[abs[0] + 1][abs[1]])  # bas
-        if abs[0] == 0:
-            # print("abs[0] = 0", abs)
-            a += 1
+        # if abs[0] == 0:
+        #     print("abs[0] = 0", abs)
+        #     a += 1
         # if abs[1] == 0:
         #     print("abs[1] = 0", abs)
         #     a += 1
@@ -37,7 +37,7 @@ def island_perimeter(grid):
         if abs[1] == 0 or grid[abs[0]][abs[1] - 1] == 0:  # gauche
             # print("abs gauche", abs)
             a += 1
-        if grid[abs[0] - 1][abs[1]] == 0:  # haut
+        if abs[0] == 0 or grid[abs[0] - 1][abs[1]] == 0:  # haut
             # print("abs haut", abs)
             a += 1
         if abs[0] + 1 > number_of_lines or grid[abs[0] + 1][abs[1]] == 0:  # bas
@@ -81,6 +81,12 @@ def island_perimeter(grid):
 #     [0, 0, 0, 1, 1, 1]
 #         ]
 
-# grid = [[0, 1, 0, 0, 0, 1],[1, 1, 0, 0, 0, 1],[1, 1, 0, 1, 1, 1],[0, 1, 1, 1, 0, 0],[0, 0, 1, 1, 0, 0]]
+# grid = [
+#     [0, 1, 0, 0, 0, 1],
+#     [1, 1, 0, 0, 0, 1],
+#     [1, 1, 0, 1, 1, 1],
+#     [0, 1, 1, 1, 0, 0],
+#     [0, 0, 1, 1, 0, 0]
+#     ]
 
 # island_perimeter(grid)
