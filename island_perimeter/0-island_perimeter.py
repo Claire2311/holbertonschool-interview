@@ -28,13 +28,13 @@ def island_perimeter(grid):
         if abs[0] == 0:
             # print("abs[0] = 0", abs)
             a += 1
-        if abs[1] == 0:
-            # print("abs[1] = 0", abs)
-            a += 1
+        # if abs[1] == 0:
+        #     print("abs[1] = 0", abs)
+        #     a += 1
         if abs[1] + 1 > number_of_columns or grid[abs[0]][abs[1] + 1] == 0:  # droite
             # print("abs droite", abs)
             a += 1
-        if grid[abs[0]][abs[1] - 1] == 0:  # gauche
+        if abs[1] == 0 or grid[abs[0]][abs[1] - 1] == 0:  # gauche
             # print("abs gauche", abs)
             a += 1
         if grid[abs[0] - 1][abs[1]] == 0:  # haut
