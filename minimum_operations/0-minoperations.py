@@ -10,7 +10,7 @@ from typing import List
 
 def minOperations(n) -> int:
     """
-    calculates the fewest number of operations needed to result in exactly 
+    calculates the fewest number of operations needed to result in exactly
     n H characters in the file
     """
     number_of_operations: int = 0
