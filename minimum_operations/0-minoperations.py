@@ -28,17 +28,18 @@ def minOperations(n) -> int:
         return True
 
     is_n_is_prime = is_prime(n)
+    # print('is prime', is_n_is_prime)
 
     if is_n_is_prime is True:
         number_of_operations = n
         return number_of_operations
     else:
-        return n % 2
+        return int(n / 3 + 3)
 
     return number_of_operations
 
 
-# print(minOperations(0))
+# print(minOperations(21))
 # print(minOperations(1))
 # print(minOperations(4))
 # print(minOperations(5))
