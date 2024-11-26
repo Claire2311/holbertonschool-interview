@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Check if data represents a valid UTF-8 encoding"""
 from typing import List
 
 
