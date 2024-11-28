@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Algo Rain on Holberton project"""
+
 
 def rain(walls: list[int]) -> int:
     """calculate how many square units of water will be retained
