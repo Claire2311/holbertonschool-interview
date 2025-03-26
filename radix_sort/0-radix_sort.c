@@ -49,6 +49,6 @@ void radix_sort(int *array, size_t size) {
     // Appliquer le tri pour chaque position de chiffre
     for (int exp = 1; max / exp > 0; exp *= 10) {
         countingSort(array, size, exp);
-        printArray(array, size); // Afficher le tableau après chaque itération
+        print_array(array, size); // Afficher le tableau après chaque itération
     }
 }
