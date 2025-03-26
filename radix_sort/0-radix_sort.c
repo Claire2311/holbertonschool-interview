@@ -5,6 +5,7 @@
 * @return void
 */
 
+#include "sort.h"
 
 void countingSort(int *array, size_t size, int exp) {
     int output[MAX_SIZE]; // Tableau de sortie temporaire
