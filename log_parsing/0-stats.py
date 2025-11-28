@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Log parsing and statistics accumulation
+"""
 
 import sys
 
